@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background: #375461;
+}
+.position-relative {
+  z-index: 1;
+}
+
+img {
+ 
+ -webkit-mask-image: linear-gradient(black 80%, transparent);
+  mask-image: linear-gradient(black 80%, transparent);
+}
+.card-img-top img {
+  -webkit-mask-image: linear-gradient(black 80%, transparent);
+  mask-image: linear-gradient(black 80%, transparent);
+  transition: transform 0.3s ease-in-out;
+}
+.btn-add {
+  background-color: #582c92; 
+  color: white;
+  border-radius: 20%;
+}
+.btn-add:hover {
+  background-color: #7e5dca !important;
+  color: #fff !important;
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas-body {
+  background-color: #9ebcda
+}
+.btn-primary {
+  background-color: #1b1a20;
+  color: white;
+}
+.btn-primary:hover {
+  border: none;
+  opacity: 0.8;
+}
+
+.btn-status {
+  background-color: #1c2044;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #1b1a20;
+  color: white;
+}

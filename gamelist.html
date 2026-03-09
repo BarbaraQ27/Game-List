@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game list app</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="gamelist.css" />
+</head>
+
+<body>
+
+    <div class="container my-5">
+        <h1 class="text-center fw-bold">Game list</h1>
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">My game list</button>
+        <div id="games-container" class="row g-4 mt-4"></div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <input type="text" id="gameName" placeholder="Buscar juego" required> <button id="searchBtn">Search</button>
+        <p id="noResults"></p>
+    </div>
+
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">My game list</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+            </button>
+
+        </div>
+        <div class="offcanvas-body">
+            <div class="row" id="items"></div>
+        </div>
+        <template id="template-myList">
+            <tr>
+                <img src="" alt="image" class="img-fluid rounded">
+                <th>1</th>
+                <th scope="row">name</th>
+            </tr>
+            <tr>
+                <th>otros</th>
+            </tr>
+            <button class="btn-status" id="toggleButton" onclick="changeStatus(this)">PENDING</button>
+            <button class="btn-delete">Delete</button>
+        </template>
+    </div>
+
+    <div class="row" id="cards"></div>
+
+    <template id="template-card">
+        <div class="col-12 mb-2 col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="" alt="" class="card-img-top">
+                    <h5>Titulo</h5>
+                    <p>Plataforma</p>
+                    <button class="btn-add">Add to list</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="gamelist.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
