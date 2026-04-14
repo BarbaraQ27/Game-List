@@ -1,4 +1,4 @@
-const API_KEY = ""
+
 const API_URL = `https://api.rawg.io/api/games?key=${API_KEY}&dates=2019-09-01,2026-03-03&ordering=-added&page_size=35`
 const HTMLResponse = document.getElementById("games-container");
 const container = document.getElementById("games-container");
