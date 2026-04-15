@@ -1,5 +1,7 @@
 # Game List
 
+[![Open Demo](https://github.com/codespaces/badge.svg)](https://barbaraq27.github.io/Game-List/)
+
 APP de listado cuyo objetivo es consumir datos desde una API para mostrar la data mediante cards. La APP tiene la función de añadir los juegos desde la lista principal a una lista personal que implementa un boton de estado que alterna entre pendiente y completado. 
 
 ## Derechos de API
